@@ -1,5 +1,5 @@
 # Week06_KnightsTour
-Formålet med programmet er et simulere et forløb, hvor en springer (knight) bevæges rundt på et skakbræt (eller en anden størrelse spillebræt), indtil alle felter er blevet besøgt. Hvert felt må kun besøges én gang.
+Formålet med programmet er et simulere et forløb, hvor en springer (knight) bevæges rundt på et skakbræt (eller en anden størrelse spillebræt), indtil alle felter er blevet besøgt. Hvert felt må kun besøges én gang per tur.
 
 # Funktion
 Programmet fungerer ved, at main.c kalder funktionerne i knights_tour.c (move_is_possible() og tour_greedy()) med de givne/indtastede parametre for størrelse af bræt og startfelt. På nuværende tidspunkt er dog kun ét hardcoded forløb muligt (en demo), da jeg ikke har fået implementeret valg af brætstørrelse og startfelt m.v.
