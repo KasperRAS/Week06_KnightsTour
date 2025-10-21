@@ -1,0 +1,121 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="314pt" height="584pt" viewBox="0 0 314.48 583.65">
+<g id="graph0" class="graph" transform="translate(69.99490178821384,517.2387644065029) scale(0.8705505632961241)" data-name="TourGreedy">
+
+<polygon fill="white" stroke="none" points="-18,18 -18,-565.65 296.48,-565.65 296.48,18 -18,18"/>
+<!-- start --><text text-anchor="middle" x="139.24" y="-531.05" font-family="Times,serif" font-size="14.00">Knight's Tour</text>
+<g id="node1" class="node" pointer-events="visible" data-name="start">
+
+<ellipse fill="none" stroke="black" cx="83.91" cy="-504.85" rx="27" ry="18"/>
+<text text-anchor="middle" x="83.91" y="-501.85" font-family="Times,serif" font-size="10.00">Start</text>
+</g>
+<!-- init -->
+<g id="node2" class="node" pointer-events="visible" data-name="init">
+
+<polygon fill="none" stroke="black" points="157.48,-449.85 10.34,-449.85 10.34,-413.85 157.48,-413.85 157.48,-449.85"/>
+<text text-anchor="middle" x="83.91" y="-434.85" font-family="Times,serif" font-size="10.00">Nulstil bræt (alle felter ubesøgte)</text>
+<text text-anchor="middle" x="83.91" y="-422.85" font-family="Times,serif" font-size="10.00">Sæt trin=1</text>
+</g>
+<!-- start&#45;&gt;init -->
+<g id="edge1" class="edge" data-name="start-&gt;init">
+
+<path fill="none" stroke="black" d="M83.91,-486.67C83.91,-479.08 83.91,-469.96 83.91,-461.39"/>
+<polygon fill="black" stroke="black" points="87.41,-461.4 83.91,-451.4 80.41,-461.4 87.41,-461.4"/>
+</g>
+<!-- choose -->
+
+<!-- init&#45;&gt;choose -->
+<g id="edge2" class="edge" data-name="init-&gt;vaelg" data-comment="init-&gt;choose">
+
+<path fill="none" stroke="black" d="M83.91,-413.67C83.91,-406.08 83.91,-396.96 83.91,-388.39"/>
+<polygon fill="black" stroke="black" points="87.41,-388.4 83.91,-378.4 80.41,-388.4 87.41,-388.4"/>
+</g>
+<!-- try -->
+<g id="node3" class="node" pointer-events="visible" data-name="vaelg" data-comment="try">
+
+<polygon fill="none" stroke="black" points="142.22,-376.85 25.59,-376.85 25.59,-340.85 142.22,-340.85 142.22,-376.85"/>
+<text text-anchor="middle" x="83.91" y="-361.85" font-family="Times,serif" font-size="10.00">Vælg startfelt</text>
+<text text-anchor="middle" x="83.91" y="-349.85" font-family="Times,serif" font-size="10.00">Markér som besøgt (trin)</text>
+</g><g id="node4" class="node" pointer-events="visible" data-name="forsoeg" data-comment="try">
+
+<polygon fill="none" stroke="black" points="155.04,-303.85 12.77,-303.85 12.77,-267.85 155.04,-267.85 155.04,-303.85"/>
+<text text-anchor="middle" x="83.91" y="-282.85" font-family="Times,serif" font-size="10.00">Vælg næste af 8 springer-offsets</text>
+</g>
+<!-- choose&#45;&gt;try -->
+<g id="edge3" class="edge" data-name="vaelg-&gt;forsoeg" data-comment="choose-&gt;try">
+
+<path fill="none" stroke="black" d="M83.91,-340.67C83.91,-333.08 83.91,-323.96 83.91,-315.39"/>
+<polygon fill="black" stroke="black" points="87.41,-315.4 83.91,-305.4 80.41,-315.4 87.41,-315.4"/>
+</g>
+<!-- legal -->
+<g id="node5" class="node" pointer-events="visible" data-name="lovligt" data-comment="legal">
+
+<polygon fill="none" stroke="black" points="126.22,-230.85 41.59,-230.85 41.59,-194.85 126.22,-194.85 126.22,-230.85"/>
+<text text-anchor="middle" x="83.91" y="-215.85" font-family="Times,serif" font-size="10.00">Indenfor bræt?</text>
+<text text-anchor="middle" x="83.91" y="-203.85" font-family="Times,serif" font-size="10.00">OG ubesøgt felt?</text>
+</g>
+<!-- try&#45;&gt;legal -->
+<g id="edge4" class="edge" data-name="forsoeg-&gt;lovligt" data-comment="try-&gt;legal">
+
+<path fill="none" stroke="black" d="M83.91,-267.67C83.91,-260.08 83.91,-250.96 83.91,-242.39"/>
+<polygon fill="black" stroke="black" points="87.41,-242.4 83.91,-232.4 80.41,-242.4 87.41,-242.4"/>
+</g>
+<!-- move -->
+<g id="node6" class="node" pointer-events="visible" data-name="flyt" data-comment="move">
+
+<polygon fill="none" stroke="black" points="61.72,-142.05 0.09,-142.05 0.09,-98.05 61.72,-98.05 61.72,-142.05"/>
+<text text-anchor="middle" x="30.91" y="-129.05" font-family="Times,serif" font-size="10.00">Flyt til felt</text>
+<text text-anchor="middle" x="30.91" y="-117.05" font-family="Times,serif" font-size="10.00">trin++</text>
+<text text-anchor="middle" x="30.91" y="-105.05" font-family="Times,serif" font-size="10.00">Markér felt</text>
+</g>
+<!-- legal&#45;&gt;move -->
+<g id="edge5" class="edge" data-name="lovligt-&gt;flyt" data-comment="legal-&gt;move">
+
+<path fill="none" stroke="black" d="M73.94,-194.78C66.99,-182.87 57.52,-166.64 49.23,-152.44"/>
+<polygon fill="black" stroke="black" points="52.28,-150.72 44.21,-143.85 46.23,-154.25 52.28,-150.72"/>
+<text text-anchor="middle" x="68.74" y="-164.25" font-family="Times,serif" font-size="14.00">Ja</text>
+</g>
+<!-- more -->
+<g id="node7" class="node" pointer-events="visible" data-name="flere" data-comment="more">
+
+<polygon fill="none" stroke="black" points="196.1,-138.05 95.71,-138.05 95.71,-102.05 196.1,-102.05 196.1,-138.05"/>
+<text text-anchor="middle" x="145.91" y="-123.05" font-family="Times,serif" font-size="10.00">Flere offsets at prøve</text>
+<text text-anchor="middle" x="145.91" y="-111.05" font-family="Times,serif" font-size="10.00">for dette skridt?</text>
+</g>
+<!-- legal&#45;&gt;more -->
+<g id="edge6" class="edge" data-name="lovligt-&gt;flere" data-comment="legal-&gt;more">
+
+<path fill="none" stroke="black" d="M95.57,-194.78C104.6,-181.54 117.29,-162.97 127.66,-147.77"/>
+<polygon fill="black" stroke="black" points="130.49,-149.85 133.23,-139.62 124.7,-145.9 130.49,-149.85"/>
+<text text-anchor="middle" x="129.01" y="-164.25" font-family="Times,serif" font-size="14.00">Nej</text>
+</g>
+<!-- move&#45;&gt;try -->
+<g id="edge7" class="edge" data-name="flyt-&gt;forsoeg" data-comment="move-&gt;try">
+
+<path fill="none" stroke="black" d="M26.92,-142.19C23.59,-164.99 21.09,-201.91 32.91,-230.85 37.29,-241.6 44.9,-251.46 52.92,-259.74"/>
+<polygon fill="black" stroke="black" points="50.24,-262.02 59.88,-266.41 55.08,-256.96 50.24,-262.02"/>
+</g>
+<!-- more&#45;&gt;try -->
+<g id="edge8" class="edge" data-name="flere-&gt;forsoeg" data-comment="more-&gt;try">
+
+<path fill="none" stroke="black" d="M147.73,-138.4C149.32,-160.92 149.47,-200.87 134.91,-230.85 129.75,-241.47 121.77,-251.39 113.64,-259.77"/>
+<polygon fill="black" stroke="black" points="111.39,-257.07 106.64,-266.54 116.26,-262.1 111.39,-257.07"/>
+<text text-anchor="middle" x="151.74" y="-208.65" font-family="Times,serif" font-size="14.00">Ja</text>
+</g>
+<!-- stop -->
+<g id="node8" class="node" pointer-events="visible" data-name="stop">
+
+<ellipse fill="none" stroke="black" cx="145.91" cy="-22.63" rx="78.72" ry="22.76"/>
+<text text-anchor="middle" x="145.91" y="-25.63" font-family="Times,serif" font-size="10.00">Stop</text>
+<text text-anchor="middle" x="145.91" y="-13.63" font-family="Times,serif" font-size="10.00">Rapportér antal besøgte</text>
+</g>
+<!-- more&#45;&gt;stop -->
+<g id="edge9" class="edge" data-name="flere-&gt;stop" data-comment="more-&gt;stop">
+
+<path fill="none" stroke="black" d="M145.91,-101.99C145.91,-89.43 145.91,-71.96 145.91,-56.7"/>
+<polygon fill="black" stroke="black" points="149.41,-57.09 145.91,-47.09 142.41,-57.09 149.41,-57.09"/>
+<text text-anchor="middle" x="212.2" y="-67.45" font-family="Times,serif" font-size="14.00">Nej (ingen lovlige træk)</text>
+</g>
+
+</g>
+</svg>
